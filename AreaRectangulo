@@ -1,0 +1,20 @@
+#include "stdafx.h"
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" //getch
+
+using namespace std;
+
+
+
+void main()
+{ float a,b,area;
+	cout<<"Ingrese el primer valor del rectangulo: "<<endl;
+	cin>>a;
+	cout<<"Ingrese el segundo valor:"<<endl;
+	cin>>b;
+	area=a*b;
+	cout<<"El area es: "<<area;
+
+	getch();
+}
