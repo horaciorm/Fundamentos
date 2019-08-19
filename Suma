@@ -1,0 +1,21 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" //getch
+
+using namespace std;
+
+
+
+void main()
+{ float a,b,suma;
+	cout<<"Ingrese el primer sumando: "<<endl;
+	cin>>a;
+	cout<<"Ingrese el segundo sumando:"<<endl;
+	cin>>b;
+	suma=a+b;
+	cout<<"La suma es: "<<suma;
+
+	getch();
+}
+
