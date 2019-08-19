@@ -1,0 +1,19 @@
+#include "stdafx.h"
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" //getch
+
+using namespace std;
+
+
+
+void main()
+{ float r,p,a;
+	cout<<"Ingrese el radio"<<endl;
+	cin>>r;
+
+	a=3.14*(r*r);
+	cout<<"El area es: "<<a;
+
+	getch();
+}
