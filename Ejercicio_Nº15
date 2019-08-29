@@ -1,0 +1,54 @@
+#include "stdafx.h"
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+
+int main() {
+int dia, mes, año;
+cout<<"Ingrese una fecha:"<<endl;
+	cin>>dia>>mes>>año;
+if (mes == 1)
+	cout<<"Verano"<<endl;
+else if (mes == 2)
+	cout<<"Verano"<<endl;
+else if (mes == 3) {
+if (dia < 21)
+	cout<<"Verano"<< endl;
+else
+	cout<<"Otonho"<<endl;
+}
+else if (mes == 4)
+	cout<<"Otonho"<<endl;
+else if (mes == 5)
+	cout<<"Otonho"<<endl;
+else if (mes == 6) {
+if (dia < 21)
+	cout<<"Otonho"<<endl;
+else
+	cout<<"Invierno"<<endl;
+}
+else if (mes == 7)
+	cout<<"Invierno"<<endl;
+else if (mes == 8)
+	cout<<"Invierno"<<endl;
+else if (mes == 9) {
+if (dia < 21)
+	cout<<"Invierno"<<endl;
+else
+	cout<<"Primavera"<<endl;
+}
+else if (mes == 10)
+	cout<<"Primavera"<<endl;
+else if (mes == 11)
+	cout<<"Primavera"<<endl;
+else if (mes == 12) {
+if (dia < 21)
+	cout<<"Primavera"<<endl;
+else
+	cout<<"Verano"<<endl;
+}
+	system("pause");
+	return 0;
+}
+
