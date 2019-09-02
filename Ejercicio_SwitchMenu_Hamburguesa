@@ -1,0 +1,30 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+int main()
+{ int op,cantidad,costo,monto;
+	cout<<"Menu"<<endl;
+	cout<<"1.Hamburguesas"<<endl;
+	cout<<"2.Hamburguesas con queso"<<endl;
+	cout<<"3.Papas fritas"<<endl;
+	cout<<"4.Soda"<<endl;
+	cout<<"Opcion?"<<endl;
+	cin>>op;
+
+	switch(op){
+	case 1: costo=3;break;
+	case 2: costo=5;break;
+	case 3: costo=2;break;
+	case 4: costo=2.5;break;
+	default:cout<<"opcion invalida";
+	}
+	cout<<"cantidad"<<endl;
+	cin>>cantidad;
+	monto=costo*cantidad;
+	cout<<"El costo total es:"<<monto;
+	getch();
+}
