@@ -1,0 +1,29 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{float p1,p2,p3,pf,ef,nf,pro,prof,notafinal;
+	cout<<"Ingrese la nota 1: ";
+	cin>>p1;
+	cout<<"Ingrese la nota 2: ";
+	cin>>p2;
+	cout<<"Ingrese la nota 3: ";
+	cin>>p3;
+	pf=(((p1+p2+p3)/3)*0.4);
+	cout<<"Promedio de parciales:"<<pf<<endl;
+	cout<<"Ingrese su nota del examen final:";
+	cin>>ef;
+	nf=ef*0.4;
+	cout<<"Su puntos ponderados en el final son:"<<nf<<endl;
+	cout<<"Ingrese su nota de proyecto:";
+	cin>>pro;
+	prof=pro*0.2;
+	cout<<"Sus puntos ponderados en en proyectos son:"<<prof<<endl;
+	notafinal=prof+nf+pf;
+	cout<<"Sus puntos ponderados son:"<<notafinal;
+	getch();
+}
