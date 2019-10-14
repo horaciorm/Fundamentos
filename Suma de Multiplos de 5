@@ -1,0 +1,19 @@
+//Horacio Morales -Ej 17
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+
+int main(){
+	
+	int acum=0,j=0;
+   for (int i=1; i<=20; i++)
+   {  j=j+5;
+	  cout<<j<<endl;
+	  acum=acum+j;
+	}
+   cout<<"La suma es: "<<acum;
+	getch();
+}
