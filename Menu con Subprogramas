@@ -1,0 +1,51 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+//prototipos
+float calculoperimetro(float r);
+float calculodiametro(float r);
+float calculoarea(float r);
+float calculovolumen(float r);
+
+int main()
+{	float r, Area;
+	int op;
+	do{cout<<"Ingrese el radio: ";
+	cin>>r;
+	// Presentar el menu
+	cout<<"-------Menu-------"<<endl;
+	cout<<"1. Calcular el perimetro"<<endl;
+	cout<<"2. Calcular el area"<<endl;
+	cout<<"3. Calcular el volumen"<<endl;
+	cout<<"4. Calcular el diametro"<<endl;
+	cout<<"5. Salir"<<endl;
+	cout<<"opcion?"<<endl;
+	//Seleccionar la opcion
+	cin>>op;
+	switch(op){
+	case 1: cout<<calculoperimetro(r);break;
+	case 2: cout<<calculoarea(r);break;
+	case 3: cout<<calculovolumen(r);break;
+	case 4: cout<<calculodiametro(r)<<endl;break;
+	case 5: cout<<"Salir"<<endl;break;
+	default: cout<<"Error"<<endl;break;
+	}
+	}while(op!=5);
+	getch();
+}
+
+float calculoperimetro(float r)
+{return 2*3.141516*r;}
+float calculoarea(float r)
+{float aux;
+	aux=2*3.141516*r*r;
+	return aux;
+}
+float calculovolumen(float r)
+{float V=(4/3)*3.141516*r*r*r;
+return V;}
+float calculodiametro(float r)
+{float D;
+	D=2*r;
+return D;}
