@@ -1,0 +1,92 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+int mcd(int a, int b)
+{ int res=1;
+for(int i = 1; i <= a; i++){
+	if((a % i == 0) && (b % i == 0)){
+		res=i;}}
+return res;}
+void sum(int n1, int d1, int n2, int d2)
+{ int n3,d3;
+
+n3 = n1 * d2 + n2 * d1;
+d3 = d1 * d2;
+n3=n3/mcd(n3,d3);
+d3=d3/mcd(n3,d3);
+if(n3==0)
+{
+	cout<<"fraccion: 0 "<<endl;
+}
+else
+{
+	cout<<n3<<"/"<<d3;
+}
+}
+int mult(int n1 , int n2)
+{
+	int m3;
+	m3 = n1 * n2;
+	return m3;
+}
+void leer(int&n1, int&d1)
+{
+	cout<<"introduzca numerador de 1era fraccion" << endl;
+cin >> n1;
+cout << "introduzca denominador de 1era fraccion" << endl;
+cin >> d1;
+
+}
+ 
+int main(){
+	int n1, d1, n2, d2, op, x, y;
+cout << "-----MENU-----" << endl;
+cout << "1. Sumar 2 fracciones" << endl;
+cout << "2.multiplicar 2 fracciones" << endl;
+cout << "3.simplificar una fracción: " << endl;
+cout << "4.salir" << endl;
+cin >> op;
+ 
+switch (op)
+{
+case 1:
+leer(n1,d1);
+leer(n2,d2);
+if (d1==0 || d2==0)
+{
+cout<<"No esta definido"<<endl;
+break;
+}
+sum(n1,d1,n2,d2);break;
+case 2:
+leer(n1,d1);
+leer(n2,d2);
+if (d1==0 || d2==0)
+{
+cout<<"No esta definido"<<endl;
+break;
+}
+x = mult(n1, n2);
+y = mult(d1, d2);
+if(x / mcd(x, y)==0 )
+{
+cout<<"fraccion: 0 "<<endl;
+}
+else
+{
+cout << x / mcd(x, y) << "/" << y / mcd(x, y);
+}
+break;
+case 3: leer(n1,d1);
+if (d1==0)
+{
+break;
+}
+cout << "primera fraccion simplificada : " << endl;
+cout << n1 / mcd(n1, d1) << "/" << d1 / mcd(n1, d1);break;
+case 4: cout << "salir: ";break;
+default: cout<<"error";
+}
+return 0;
+}
